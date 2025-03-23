@@ -31,7 +31,6 @@ git clone https://github.com/YourUsername/Handwriting-Feature-Extraction.git
 📁 Handwriting-Feature-Extraction
 │── 📂 src/                  # MATLAB feature extraction scripts
 │── 📂 test_images/          # Sample handwriting images
-│── 📂 gui/                  # GUI source files
 │── 📄 main_gui.mlapp        # MATLAB App Designer GUI
 │── 📄 README.md             # Documentation
 │── 📄 log.txt               # Log file for analysis results
