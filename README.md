@@ -35,6 +35,9 @@ git clone https://github.com/YourUsername/Handwriting-Feature-Extraction.git
 │── 📄 README.md             # Documentation
 │── 📄 log.txt               # Log file for analysis results
 ```
+
+---
+
 ## 🚀 Running the GUI
 ### 📌 Prerequisites
 1. Ensure MATLAB is installed.
@@ -56,14 +59,16 @@ main_gui
     - Pick up to 3 features.
     - Click "Run Analysis".
 
+---
+
 ### 🛠️ Adding Custom Feature Extraction Scripts
 #### 1️⃣ Create a New Script
-- Place it inside the /src/ folder.
+- Place it inside the `/src/` folder.
 - Ensure the function name matches the script filename.
 
-📌 Example (slant_detection.m):
+📌 Example (example_detection.m):
 ```
-function result = slant_detection(imagePath)
+function result = example_detection(imagePath)
     % Load image
     img = imread(imagePath);
     
@@ -76,23 +81,31 @@ end
 ```
 #### 2️⃣ Register the New Script in the GUI
 Modify `RunAnalysisButtonPushed.m` inside `main_gui.mlapp`.
-📌 Step 1: Update the script list
-Find this section:
+
+**➡️ Step 1: Update the script list**  
+Find the `scriptMap` definition and update it like this:
+
+**📌 Before adding the new script:**
 ```
 scriptMap = containers.Map( ...
     {'Baseline Detection', 'Slant Detection', 'Letter Spacing', 'Stroke Continuity'}, ...
     {@baseline_detection, @slant_detection, @space_detection, @stroke_detection} ...
 );
 ```
-Add your function:
+**📌 After adding example_detection.m:**
 ```
-scriptMap('Custom Feature') = @custom_feature;
+scriptMap = containers.Map( ...
+    {'Baseline Detection', 'Slant Detection', 'Letter Spacing', 'Stroke Continuity', 'Example Detection'}, ...
+    {@baseline_detection, @slant_detection, @space_detection, @stroke_detection, @example_detection} ...
+);
 ```
-📌 Step 2: Update Dropdown List
+**➡️ Step 2: Update Dropdown List**  
 Inside createComponents(), update the dropdown menu:
 ```
 app.SelectFeature1DropDown.Items = {'Baseline Detection', 'Slant Detection', 'Letter Spacing', 'Stroke Continuity', 'Custom Feature'};
 ```
+
+---
 
 ### 🔄 Updating & Contributing
 #### 📌 Create Your Own Branch
