@@ -17,14 +17,13 @@ A **MATLAB-based GUI** for handwriting analysis, allowing users to **upload hand
 ### Using GitHub Desktop:
 1. Open **GitHub Desktop**.
 2. Go to **File** → **Clone Repository**.
-3. Select **"URL"** and enter:
-https://github.com/YourUsername/Handwriting-Feature-Extraction.git
+3. Select **"URL"** and enter: `https://github.com/zayedrmdn/Handwriting-Feature-Extraction.git`
 4. Choose a folder to store the project.
 5. Click **"Clone"** and wait for the process to finish.
 
 ### Using Git Bash or Terminal:
 ```
-git clone https://github.com/YourUsername/Handwriting-Feature-Extraction.git
+https://github.com/zayedrmdn/Handwriting-Feature-Extraction.git
 ```
 ## 📂 Project Structure
 ```
