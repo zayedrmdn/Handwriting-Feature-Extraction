@@ -1,21 +1,21 @@
 === Handwriting Analysis Log ===
-Image Processed: C:\Users\yjun0\OneDrive\Documents\GitHub\Handwriting-Feature-Extraction\test_images\Italic_2.jpg
+Image Processed: C:\Local Files\IPPR LOCAL\main2\Handwriting-Feature-Extraction\test_images\handwriting 1.jpg
 
-Running: Pressure Pattern
---- Pressure Pattern ---
-Baseline Score: 214.3055
-Type: Heavy Pressure
+Running: Aspect_Ratio
+--- Aspect_Ratio ---
+Result Score: 161.2000°
+Type: High Aspect Ratio
  
 
-Running: Line Quality
---- Line Quality ---
-Baseline Score: 0.0777
-Type: Smooth & Clear
+Running: Contour_Complexity
+--- Contour_Complexity ---
+Result Score: 1.0912°
+Type: High Contour Complexity
  
 
-Running: Letter Formation
---- Letter Formation ---
-Baseline Score: 0.7715
-Type: Distorted
+Running: Loop_Density
+--- Loop_Density ---
+Result Score: 98.0000°
+Type: High Loop Density
  
 
