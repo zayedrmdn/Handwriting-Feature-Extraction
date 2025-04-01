@@ -1,17 +1,6 @@
 function result = Vertical_Stroke_Density(imagePath)
 % VERTICAL_STROKE_DENSITY: Computes the density of vertical strokes by applying
 % vertical edge detection and calculating the ratio of detected edge pixels.
-%
-% Input:
-%   imagePath - Path to the handwriting image.
-%
-% Output:
-%   result - Structure containing:
-%            Result : Calculated vertical edge density.
-%            Type   : 'High Vertical Stroke Density' or 'Low Vertical Stroke Density'.
-%
-% Author: [Your Name]
-% Date: [Current Date]
 
 %% --- Tweakable Parameters ---
 edgeThreshold = 0.2;

@@ -1,15 +1,7 @@
 function result = Stroke_Fragmentation(imagePath)
 % STROKE_FRAGMENTATION: Evaluates the fragmentation of strokes (pen-lift frequency)
 % for signature analysis.
-%
-% Input:
-%   imagePath - Path to the signature image.
-%
-% Output:
-%   result - Structure containing:
-%            Result : Number of stroke fragments.
-%            Type   : 'Low Fragmentation', 'Moderate Fragmentation', or 'High Fragmentation'.
-%
+
 %% --- Tweakable Parameters ---
 medianFilterSize       = [5 5];
 binarizationSensitivity  = 0.7;

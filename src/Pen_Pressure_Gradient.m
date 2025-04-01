@@ -1,17 +1,11 @@
 function result = Pen_Pressure_Gradient(imagePath)
 % PEN_PRESSURE_GRADIENT: Analyzes the pressure gradient across a signature by dividing 
 % the image into vertical slices and computing the mean intensity of each slice.
-%
-% Input:
-%   imagePath - Path to the signature image.
-%
-% Output:
-%   result - Structure containing:
-%            Result : Mean absolute pressure gradient.
-%            Type   : 'High Pressure Gradient' or 'Low Pressure Gradient'.
-%
-% Author: [Your Name]
-% Date: [Current Date]
+
+%% --- Tweakable Parameters ---
+medianFilterSize = [3 3];   % Kernel size for median filtering
+numSlices        = 50;      % Number of vertical slices for pressure analysis
+arrowThreshold   = 10;      % Threshold for visualizing pressure gradient arrows
 
 %% --- Step 1: Image Acquisition & Preprocessing ---
 Image = imread(imagePath);
@@ -21,13 +15,9 @@ else
     grayImage = Image;
 end
 
-medianFilterSize = [3 3];  
 grayImageFiltered = medfilt2(grayImage, medianFilterSize);
 
 %% --- Step 2: Feature Extraction: Pressure Profile & Gradient ---
-numSlices = 50;
-arrowThreshold = 10;
-
 [rows, cols] = size(grayImageFiltered);
 sliceWidth = floor(cols / numSlices);
 pressureProfile = zeros(1, numSlices);

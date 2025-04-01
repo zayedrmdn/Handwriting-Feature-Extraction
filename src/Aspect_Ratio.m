@@ -1,17 +1,6 @@
 function result = Aspect_Ratio(imagePath)
 % ASPECT_RATIO: Computes the maximum aspect ratio (width/height) of merged bounding boxes 
 % for signature analysis.
-%
-% Input:
-%   imagePath - Path to the signature image.
-%
-% Output:
-%   result - Structure containing:
-%            Result : Maximum aspect ratio.
-%            Type   : 'Low Aspect Ratio' or 'High Aspect Ratio'.
-%
-% Author: [Your Name]
-% Date: [Current Date]
 
 %% --- Tweakable Parameters ---
 medianFilterSize       = [5 5];      % Median filter kernel size

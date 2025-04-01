@@ -1,16 +1,9 @@
 function result = Loop_Density(imagePath)
 % LOOP_DENSITY: Computes loop density by detecting and counting enclosed loops in a handwriting sample.
-%
-% Input:
-%   imagePath - Path to the handwriting image.
-%
-% Output:
-%   result - Structure containing:
-%            Result : Number of detected loops.
-%            Type   : 'High Loop Density' or 'Low Loop Density'.
-%
-% Author: [Your Name]
-% Date: [Current Date]
+
+%% --- Tweakable Parameters ---
+minLoopArea   = 10;  % Minimum area for a region to be considered a loop
+loopThreshold = 10;  % Threshold for classifying loop density
 
 %% --- Step 1: Image Acquisition & Preprocessing ---
 Image = imread(imagePath);
@@ -25,15 +18,12 @@ invertedImage = imcomplement(binaryImage);
 filledImage = imfill(invertedImage, 'holes');
 
 %% --- Feature Extraction ---
-minLoopArea = 10;
 loopsImage = filledImage & ~invertedImage;
 loopsImage = bwareaopen(loopsImage, minLoopArea);
 
 cc = bwconncomp(loopsImage);
 loopCount = cc.NumObjects;
 
-% Set a threshold for loop density classification (example threshold: 10 loops)
-loopThreshold = 10;
 if loopCount >= loopThreshold
     classification = 'High Loop Density';
 else
