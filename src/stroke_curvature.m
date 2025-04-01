@@ -35,8 +35,6 @@ fprintf('Handwriting Style: %s\n', handwritingStyle);
 %% Classification
 if curvatureScore < -5
     classification = 'Highly Curved';
-elif curvatureScore < 0
-    classification = 'Moderately Curved';
 else
     classification = 'Mostly Straight';
 end

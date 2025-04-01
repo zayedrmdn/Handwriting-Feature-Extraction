@@ -35,8 +35,6 @@ fprintf('Handwriting Style: %s\n', handwritingStyle);
 %% Classification
 if thicknessScore < 2
     classification = 'Thin Strokes';
-elif thicknessScore < 5
-    classification = 'Moderate Strokes';
 else
     classification = 'Thick Strokes';
 end

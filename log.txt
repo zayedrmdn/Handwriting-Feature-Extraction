@@ -1,0 +1,21 @@
+=== Handwriting Analysis Log ===
+Image Processed: C:\Users\yjun0\OneDrive\Documents\GitHub\Handwriting-Feature-Extraction\test_images\Italic_2.jpg
+
+Running: Pressure Pattern
+--- Pressure Pattern ---
+Baseline Score: 214.3055
+Type: Heavy Pressure
+ 
+
+Running: Line Quality
+--- Line Quality ---
+Baseline Score: 0.0777
+Type: Smooth & Clear
+ 
+
+Running: Letter Formation
+--- Letter Formation ---
+Baseline Score: 0.7715
+Type: Distorted
+ 
+

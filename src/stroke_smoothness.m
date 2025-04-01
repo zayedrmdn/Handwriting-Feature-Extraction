@@ -39,8 +39,6 @@ fprintf('Handwriting Style: %s\n', handwritingStyle);
 %% Classification
 if smoothnessScore < 0.05
     classification = 'Very Smooth';
-elif smoothnessScore < 0.1
-    classification = 'Moderately Smooth';
 else
     classification = 'Rough';
 end
