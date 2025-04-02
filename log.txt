@@ -1,21 +1,21 @@
 === Handwriting Analysis Log ===
-Image Processed: C:\Local Files\IPPR LOCAL\main2\Handwriting-Feature-Extraction\test_images\handwriting 1.jpg
+Image Processed: C:\Users\Zayed\Documents\GitHub\Handwriting-Feature-Extraction\test_images\cursive (3).png
 
-Running: Vertical_Stroke_Density
---- Vertical_Stroke_Density ---
-Result Score: 0.0599°
-Type: High Vertical Stroke Density
+Running: Slant Detection
+--- Slant Detection ---
+Slant Angle: -31.9870°
+Slant Type: Right-Slanted
  
 
-Running: Stroke_Fragmentation
---- Stroke_Fragmentation ---
-Result Score: 623.0000°
-Type: High Fragmentation
+Running: Baseline Detection
+--- Baseline Detection ---
+Baseline Score: 21.6724
+Type: CURSIVE
  
 
-Running: Pen_Pressure_Gradient
---- Pen_Pressure_Gradient ---
-Result Score: 2.0958°
-Type: Low Pressure Gradient
+Running: Stroke Continuity
+--- Stroke Continuity ---
+Avg Component Size: 677.5000
+Type: Cursive (High Connectivity)
  
 
